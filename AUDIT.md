@@ -2,7 +2,7 @@
 
 Date: 2026-11-12 · Next.js 16.4.6 · Tested build: fresh `npm run build` of this commit, served locally from `out/`.
 
-**Verdict:** technically ready for static deployment. Before publishing, decide on the content items in "Open issues" (mainly present-tense product claims for an application that has not been released).
+**Verdict:** ready for static deployment. The content issues found in this audit were resolved on 2026-11-12 (see "Content follow-up" at the end).
 
 ## 1. Git
 
@@ -112,5 +112,23 @@ No page design, branding, colors, typography or layout changed.
 | Accessibility (automated) | Yes |
 | SEO metadata | Yes |
 | Hosting and deploy docs | Yes (DEPLOYMENT.md) |
-| Content claims | Needs your decision on open issues 1–3 |
+| Content claims | Yes (resolved, see below) |
 | Live verification | Pending: run the smoke test in DEPLOYMENT.md after the first deploy |
+
+## Content follow-up (2026-11-12)
+
+Open issues 1–3 were resolved with content-only changes; no branding, colors, layout, typography or navigation changed.
+
+1. **Homepage claims:**
+   - The hero now describes Khaled Chat as an upcoming application, with a subtle "In Development" label above the headline.
+   - The homepage download button reads "Download: Coming Soon" until a release exists in `src/data/releases.ts`.
+   - The benefit cards, hardware steps and closing banner now use "designed to" or the future tense.
+   - The About page, Privacy page and docs were reworded the same way, and each docs section carries a pre-release note.
+   - Planned features remain, each labeled "In development" or "Planned".
+2. **Open-source FAQ:** now says Khaled Chat is being developed using the open-source Hob project, and that Khaled Chat's own source code is not public yet.
+3. **Hob attribution:**
+   - The About page and footer credit Hob and state its MIT License.
+   - The website no longer claims notices are included in the unreleased desktop app.
+   - The MIT notice requirements are now in RELEASE_CHECKLIST.md.
+
+Issues 4 (structured data operating systems) and 5 (measure homepage mobile performance on the live host) remain as noted above.

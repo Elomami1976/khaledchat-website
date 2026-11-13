@@ -3,22 +3,27 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Card, Container, IconBox, SectionHeading, StatusBadge } from "@/components/ui/primitives";
 import { AppPreview } from "./AppPreview";
 import { features } from "@/data/features";
+import { latestRelease } from "@/data/releases";
 
 export function Hero() {
   return (
     <section className="overflow-hidden">
       <Container className="pb-16 pt-16 sm:pt-24">
         <div className="fade-up mx-auto max-w-3xl text-center">
+          <p className="mb-6 inline-flex items-center rounded-full border border-line bg-bg-2 px-3 py-1 text-xs font-medium tracking-wide text-muted">
+            In Development
+          </p>
           <h1 className="text-[2.6rem] font-semibold leading-[1.05] tracking-[-0.03em] text-balance sm:text-6xl lg:text-7xl">
             Your AI. Your Device. Your Privacy.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted text-pretty sm:text-xl">
-            Khaled Chat brings powerful AI directly to your computer. Chat, work with documents, write code, and
-            explore ideas privately, even without an internet connection.
+            Khaled Chat is an upcoming desktop AI assistant designed to run locally on your computer. It aims to bring
+            private AI conversations, document assistance, coding tools, and intelligent hardware-based model
+            selection into one simple application.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <ButtonLink href="/download/" size="lg" className="w-full sm:w-auto">
-              Download Khaled Chat
+              {latestRelease ? "Download Khaled Chat" : "Download: Coming Soon"}
             </ButtonLink>
             <ButtonLink href="/features/" size="lg" variant="secondary" className="w-full sm:w-auto">
               Explore Features
@@ -34,9 +39,9 @@ export function Hero() {
 }
 
 const benefits = [
-  { icon: Lock, title: "Private by Design", text: "Your conversations and files stay on your device." },
-  { icon: WifiOff, title: "Works Offline", text: "Continue working without an internet connection after setup." },
-  { icon: Cpu, title: "Built for Your Computer", text: "Automatically discovers suitable AI models based on your hardware." },
+  { icon: Lock, title: "Private by Design", text: "Designed to keep your conversations and files on your device." },
+  { icon: WifiOff, title: "Works Offline", text: "Designed to keep working without an internet connection after setup." },
+  { icon: Cpu, title: "Built for Your Computer", text: "Designed to find suitable AI models based on your hardware." },
 ];
 
 export function Benefits() {
@@ -82,7 +87,7 @@ export function FeaturesSection() {
       <Container className="py-16 sm:py-20">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div id="features-title">
-            <SectionHeading eyebrow="Capabilities" title="Everything you need, on your own computer." />
+            <SectionHeading eyebrow="Capabilities" title="Planned capabilities, on your own computer." />
           </div>
           <ButtonLink href="/features/" variant="ghost" className="self-start md:self-auto">
             All features <ArrowRight className="h-4 w-4" aria-hidden />
@@ -98,10 +103,10 @@ export function FeaturesSection() {
 }
 
 const steps = [
-  { n: "01", title: "Detect hardware", text: "Memory, processor, graphics and storage are checked on your device." },
-  { n: "02", title: "Recommend a model", text: "A model suited to your available resources is suggested." },
-  { n: "03", title: "Download and configure", text: "The model is downloaded once and set up for you." },
-  { n: "04", title: "Work offline", text: "Supported features run locally, without a connection." },
+  { n: "01", title: "Detect hardware", text: "Memory, processor, graphics and storage will be checked on your device." },
+  { n: "02", title: "Recommend a model", text: "A model suited to your available resources will be suggested." },
+  { n: "03", title: "Download and configure", text: "The model will be downloaded once and set up for you." },
+  { n: "04", title: "Work offline", text: "Supported features will run locally, without a connection." },
 ];
 
 export function HardwareSection() {
@@ -113,7 +118,7 @@ export function HardwareSection() {
             center
             eyebrow="Hardware-aware"
             title="AI That Adapts to Your Computer"
-            intro="Khaled Chat checks your hardware and helps select an AI model suited to your available resources."
+            intro="Khaled Chat is being designed to check your hardware and help select an AI model suited to your available resources."
           />
         </div>
         <ol className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -140,7 +145,7 @@ export function DownloadCta() {
     <section>
       <Container className="py-16">
         <div className="rounded-3xl bg-invert px-6 py-16 text-center text-invert-fg sm:px-12">
-          <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">Private AI, ready when you are.</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">Private AI, coming to your desktop.</h2>
           <p className="mx-auto mt-4 max-w-xl opacity-75">
             Khaled Chat is being prepared for Windows, macOS and Linux.
           </p>

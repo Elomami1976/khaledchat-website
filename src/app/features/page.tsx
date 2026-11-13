@@ -14,7 +14,7 @@ export default function FeaturesPage() {
     <>
       <PageHeader
         eyebrow="Features"
-        title="Capable AI that stays on your computer."
+        title="Capable AI, designed to stay on your computer."
         intro="Khaled Chat is under active development. Each capability below is labeled with its current status."
       />
       <Container className="py-16">

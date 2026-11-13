@@ -1,3 +1,5 @@
+> Khaled Chat is in development and has not been released. This section describes the intended behavior and will be verified against the first release.
+
 ## Initial setup requirements
 
 An internet connection is required to download Khaled Chat and at least one AI model. Plan for the model download in advance, as model files can be several gigabytes.

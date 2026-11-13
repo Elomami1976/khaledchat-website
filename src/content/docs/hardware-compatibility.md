@@ -1,4 +1,4 @@
-> Specific minimum requirements will be published only after they have been verified through benchmarking.
+> Khaled Chat is in development and has not been released. This section describes the intended behavior. Specific minimum requirements will be published only after they have been verified through benchmarking.
 
 ## RAM and available memory
 
@@ -10,7 +10,7 @@ Every supported computer can run models on its processor. Processor speed and co
 
 ## GPU acceleration
 
-A compatible graphics card can make responses much faster. When no supported GPU is available, Khaled Chat uses the processor instead.
+A compatible graphics card can make responses much faster. When no supported GPU is available, Khaled Chat is designed to use the processor instead.
 
 ## VRAM
 

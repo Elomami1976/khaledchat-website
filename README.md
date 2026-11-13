@@ -79,7 +79,7 @@ Approved logo files live in `public/branding/` (see its README). The homepage ap
 
 The site is a fully static export: `npm ci && npm run build`, then upload the contents of `out/` to any static host with HTTPS. Always build with `npm run build` so the post-build fix in `scripts/postbuild.mjs` runs.
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for hosting requirements, DNS and HTTPS, recommended security and caching headers, smoke tests and rollback. The latest pre-deployment audit is in [AUDIT.md](AUDIT.md).
+See [DEPLOYMENT.md](DEPLOYMENT.md) for hosting requirements, DNS and HTTPS, recommended security and caching headers, smoke tests and rollback. The latest pre-deployment audit is in [AUDIT.md](AUDIT.md). Desktop app releases follow [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md), including the required Hob MIT license notices.
 
 ## Attribution
 

@@ -28,7 +28,7 @@ export function Footer() {
       </div>
       <div className="border-t border-line">
         <p className="mx-auto max-w-6xl px-5 py-6 text-xs text-muted sm:px-8">
-          © {new Date().getFullYear()} Khaled Chat. Built upon the open-source{" "}
+          © {new Date().getFullYear()} Khaled Chat. Developed using the open-source{" "}
           <a href={site.upstream.url} className="underline underline-offset-2 hover:text-fg" rel="noopener noreferrer">
             Hob
           </a>{" "}
