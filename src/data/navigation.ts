@@ -3,6 +3,7 @@ export const mainNav = [
   { href: "/download/", label: "Download" },
   { href: "/docs/", label: "Documentation" },
   { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 export const footerNav = [
@@ -26,6 +27,7 @@ export const footerNav = [
     links: [
       { href: "/about/", label: "About" },
       { href: "/privacy/", label: "Privacy" },
+      { href: "/contact/", label: "Contact" },
     ],
   },
 ];

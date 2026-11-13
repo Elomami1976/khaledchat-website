@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["/", "/features/", "/download/", "/docs/", "/privacy/", "/about/", "/changelog/", "/faq/",
+  const routes = ["/", "/features/", "/download/", "/docs/", "/privacy/", "/about/", "/changelog/", "/faq/", "/contact/",
     ...docSections.map((d) => `/docs/${d.slug}/`)];
   // the build date: every deploy is a fresh build
   const lastModified = new Date();

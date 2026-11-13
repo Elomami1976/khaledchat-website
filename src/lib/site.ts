@@ -2,6 +2,7 @@ export const site = {
   name: "Khaled Chat",
   url: "https://khaledchat.io",
   tagline: "Your AI. Your Device. Your Privacy.",
+  email: "info@khaledchat.io",
   title: "Khaled Chat | Private Offline AI for Your Computer",
   description:
     "Discover Khaled Chat, a privacy-focused desktop AI assistant designed to run locally on your computer. Work with AI offline using models suited to your hardware.",

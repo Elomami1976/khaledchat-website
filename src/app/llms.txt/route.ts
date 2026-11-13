@@ -17,6 +17,7 @@ const pages: [string, string, string][] = [
   ["About", "/about/", "The project, its goals and its relationship to Hob."],
   ["Changelog", "/changelog/", "Release notes."],
   ["FAQ", "/faq/", "Common questions."],
+  ["Contact", "/contact/", "Email info@khaledchat.io; bugs and feature requests on GitHub."],
 ];
 
 export function GET() {
