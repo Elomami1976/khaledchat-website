@@ -116,6 +116,25 @@ Notes:
 - In Nginx, an `add_header` inside a `location` replaces the server-level ones, which is why the static-assets block repeats the security headers. Copy all of them there if you want them on every response.
 - Apache equivalent: `ErrorDocument 404 /404.html`, `Header always set ...` lines in `.htaccess`, and `mod_expires`/`mod_deflate` for caching and compression.
 
+## Hostinger (current host)
+
+`public/.htaccess` is copied into `out/` by the build. It:
+- sets the 404 page;
+- redirects http and www to https://khaledchat.com;
+- adds the security and caching headers from section 6.
+
+Strict-Transport-Security is commented out. Enable it once HTTPS has worked for a few days.
+
+1. Run `npm run build`. It also generates `sitemap.xml`, `robots.txt` and `llms.txt` (from `src/app/`).
+2. Zip the **contents** of `out/`, including `.htaccess`, with forward-slash paths. On Windows, run this from inside `out/`: `tar -a -c -f ../site.zip * .htaccess`. PowerShell 5's Compress-Archive writes backslash paths, which break on Linux hosts.
+3. In hPanel, open **Websites → khaledchat.com → File Manager → public_html**.
+   - Remove the placeholder `default.php` and any previous site files.
+   - Upload the zip, choose **Extract**, then delete the zip.
+4. In **Security → SSL**, install the free certificate and turn on **Force HTTPS**.
+5. Smoke-test as in section 5. Also check:
+   - `/llms.txt`, `/robots.txt` and `/sitemap.xml` load;
+   - `https://www.khaledchat.com/` and `http://khaledchat.com/` both redirect to `https://khaledchat.com/`.
+
 ## 7. Rollback
 
 Every deploy is just a set of files, so rolling back means putting the previous files back:
