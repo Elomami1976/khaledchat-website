@@ -72,7 +72,7 @@ function AppMockup({ frame }: { frame: string }) {
             <p className="text-center text-xl font-semibold tracking-tight text-fg sm:text-3xl">Good morning, Alex.</p>
             <p className="mt-2 text-center text-[13px] text-muted sm:text-base">What would you like to work on today?</p>
             <div className="mt-6 w-full max-w-lg rounded-2xl border border-line bg-card p-3 shadow-sm sm:mt-8">
-              <p className="px-1 pb-6 text-[13px] text-muted/80 sm:pb-8">Ask anything…</p>
+              <p className="px-1 pb-6 text-[13px] text-muted sm:pb-8">Ask anything…</p>
               <div className="flex items-center justify-between">
                 <Paperclip className="h-4 w-4 text-muted" />
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-invert text-invert-fg">

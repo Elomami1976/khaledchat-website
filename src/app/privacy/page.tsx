@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Container, PageHeader, Prose } from "@/components/ui/primitives";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy",
   description: "How Khaled Chat handles your data: local AI inference, locally stored conversations and preferences, and the network connections it needs.",
-  alternates: { canonical: "/privacy/" },
-};
+  path: "/privacy/",
+});
 
 export default function PrivacyPage() {
   return (

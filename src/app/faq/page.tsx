@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { ChevronDown } from "lucide-react";
 import { Container, PageHeader } from "@/components/ui/primitives";
 import { faq } from "@/data/faq";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "FAQ",
   description: "Answers to common questions about Khaled Chat: offline use, privacy, models, hardware and supported platforms.",
-  alternates: { canonical: "/faq/" },
-};
+  path: "/faq/",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

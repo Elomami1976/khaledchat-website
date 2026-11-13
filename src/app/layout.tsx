@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   title: { default: site.title, template: "%s | Khaled Chat" },
   description: site.description,
   applicationName: site.name,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: site.name,
     url: site.url,
     title: site.title,
     description: site.description,
+    images: [site.ogImage],
   },
-  twitter: { card: "summary_large_image", title: site.title, description: site.description },
+  twitter: { card: "summary_large_image", title: site.title, description: site.description, images: [site.ogImage.url] },
   icons: { icon: "/icons/icon.svg" },
 };
 

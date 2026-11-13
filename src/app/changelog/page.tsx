@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Container, Notice, PageHeader } from "@/components/ui/primitives";
 import { releases } from "@/data/releases";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Changelog",
-  description: "Release history for Khaled Chat.",
-  alternates: { canonical: "/changelog/" },
-};
+  description: "Release history and release notes for Khaled Chat, the privacy-focused offline AI desktop assistant.",
+  path: "/changelog/",
+});
 
 const groups = [
   ["features", "New features"],

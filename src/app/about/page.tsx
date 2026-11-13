@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Container, PageHeader, Prose } from "@/components/ui/primitives";
-import { safeUrl, site } from "@/lib/site";
+import { safeUrl, site, pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
   description: "Khaled Chat is a desktop AI application focused on privacy, simplicity and accessibility, built upon the open-source Hob project.",
-  alternates: { canonical: "/about/" },
-};
+  path: "/about/",
+});
 
 export default function AboutPage() {
   const repo = safeUrl(site.repoUrl);

@@ -77,31 +77,10 @@ Approved logo files live in `public/branding/` (see its README). The homepage ap
 
 ## Deployment
 
-The site is a fully static export; no Node.js server is needed in production.
+The site is a fully static export: `npm ci && npm run build`, then upload the contents of `out/` to any static host with HTTPS. Always build with `npm run build` so the post-build fix in `scripts/postbuild.mjs` runs.
 
-1. `npm ci && npm run build`
-2. Upload the contents of `out/` to the web root of any static host (Nginx, Apache, Cloudflare Pages, Netlify, GitHub Pages, S3 + CDN…).
-3. Point `khaledchat.com` (and optionally `www`) DNS to the host, enable HTTPS (Let's Encrypt or the host's managed certificate), and redirect `http` → `https` and `www` → apex.
-
-URLs use trailing slashes (`/features/` → `out/features/index.html`). Configure the host to serve `404.html` for missing pages.
-
-### Recommended security headers
-
-Static hosts can't receive headers from Next.js, so set them at the server/CDN. Nginx example:
-
-```nginx
-add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-add_header X-Content-Type-Options "nosniff" always;
-add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-add_header X-Frame-Options "DENY" always;
-add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
-add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'" always;
-error_page 404 /404.html;
-location /_next/static/ { add_header Cache-Control "public, max-age=31536000, immutable"; }
-```
-
-(`'unsafe-inline'` is required for the inline theme script and Next.js bootstrap scripts in a static export.)
+See [DEPLOYMENT.md](DEPLOYMENT.md) for hosting requirements, DNS and HTTPS, recommended security and caching headers, smoke tests and rollback. The latest pre-deployment audit is in [AUDIT.md](AUDIT.md).
 
 ## Attribution
 
-Khaled Chat builds upon [Hob](https://github.com/FrigadeHQ/hob). The desktop application's distribution must preserve the upstream license and notices.
+Khaled Chat builds upon [Hob](https://github.com/FrigadeHQ/hob), which is released under the MIT License. The desktop application's source and distributed builds must include Hob's copyright and license notice.

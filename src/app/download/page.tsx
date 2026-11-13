@@ -3,13 +3,13 @@ import { Monitor, Apple, Terminal, Download, Info } from "lucide-react";
 import { Card, Container, Notice, PageHeader } from "@/components/ui/primitives";
 import { DisabledButton, buttonClass } from "@/components/ui/Button";
 import { assetsFor, latestRelease, platforms, type Platform } from "@/data/releases";
-import { safeUrl } from "@/lib/site";
+import { safeUrl, pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Download",
   description: "Download Khaled Chat for Windows, macOS and Linux. Release availability, versions and checksums.",
-  alternates: { canonical: "/download/" },
-};
+  path: "/download/",
+});
 
 const icons: Record<Platform, typeof Monitor> = { windows: Monitor, macos: Apple, linux: Terminal };
 

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { FeatureGrid, HardwareSection, DownloadCta } from "@/components/sections/home";
 import { Container, PageHeader, StatusBadge } from "@/components/ui/primitives";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Features",
   description: "Local AI chat, hardware-aware model selection, document assistance and more. See what Khaled Chat can do and what is in development.",
-  alternates: { canonical: "/features/" },
-};
+  path: "/features/",
+});
 
 export default function FeaturesPage() {
   return (

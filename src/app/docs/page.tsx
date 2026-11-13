@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { docSections } from "@/data/docs";
 import { Notice } from "@/components/ui/primitives";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Documentation",
   description: "Learn how to install Khaled Chat, manage local AI models, work offline and troubleshoot common problems.",
-  alternates: { canonical: "/docs/" },
-};
+  path: "/docs/",
+});
 
 export default function DocsIndex() {
   return (

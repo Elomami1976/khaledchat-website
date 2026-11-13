@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { docSections } from "@/data/docs";
 import { getDoc } from "@/lib/docs";
 import { renderMarkdown } from "@/lib/markdown";
+import { pageMetadata } from "@/lib/site";
 import { Prose } from "@/components/ui/primitives";
 
 export const dynamicParams = false;
@@ -16,7 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const doc = docSections.find((d) => d.slug === slug);
   if (!doc) return {};
-  return { title: `${doc.title} · Docs`, description: doc.description, alternates: { canonical: `/docs/${slug}/` } };
+  return pageMetadata({
+    title: `${doc.title} · Docs`,
+    description: `Khaled Chat documentation: ${doc.description} Guidance for the privacy-focused offline AI desktop assistant.`,
+    path: `/docs/${slug}/`,
+  });
 }
 
 export default async function DocPage({ params }: { params: Promise<{ slug: string }> }) {

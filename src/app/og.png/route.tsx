@@ -3,11 +3,10 @@ import path from "node:path";
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
-export const alt = "Khaled Chat — Your AI. Your Device. Your Privacy.";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+// Social sharing image, exported as a real file: out/og.png
+const size = { width: 1200, height: 630 };
 
-export default function OgImage() {
+export function GET() {
   const svg = fs.readFileSync(path.join(process.cwd(), "public", "branding", "logo-light-web.svg"));
   const logo = `data:image/svg+xml;base64,${svg.toString("base64")}`;
   return new ImageResponse(
