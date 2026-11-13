@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           <p>If future versions introduce optional features that use the network, they will be documented here and in the release notes.</p>
 
           <h2>This website</h2>
-          <p>khaledchat.com is a static website. It does not use accounts, advertising trackers or analytics. Your theme preference is stored in your browser&apos;s local storage. The hosting provider may keep standard server logs, such as IP addresses and requested pages, for operation and security.</p>
+          <p>khaledchat.io is a static website. It does not use accounts, advertising trackers or analytics. Your theme preference is stored in your browser&apos;s local storage. The hosting provider may keep standard server logs, such as IP addresses and requested pages, for operation and security.</p>
 
           <h2>No guarantees beyond the above</h2>
           <p>No software is free of defects. We describe how Khaled Chat is designed to handle data, but we do not make absolute security guarantees.</p>

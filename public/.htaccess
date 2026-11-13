@@ -1,14 +1,14 @@
-# khaledchat.com on Hostinger (Apache/LiteSpeed). Copied into out/ by `npm run build`; see DEPLOYMENT.md.
+# khaledchat.io on Hostinger (Apache/LiteSpeed). Copied into out/ by `npm run build`; see DEPLOYMENT.md.
 
 ErrorDocument 404 /404.html
 DirectoryIndex index.html
 Options -Indexes
 
-# One canonical address: https://khaledchat.com (no www, never plain http)
+# One canonical address: https://khaledchat.io (no www, never plain http)
 RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ https://khaledchat.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://khaledchat.io%{REQUEST_URI} [L,R=301]
 
 # Text files AI crawlers and search engines read
 AddType text/plain .txt

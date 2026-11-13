@@ -1,6 +1,6 @@
 # Khaled Chat — Official Website
 
-Source for https://khaledchat.com: the product site, download center and documentation for Khaled Chat, a privacy-focused offline AI desktop assistant built upon the open-source [Hob](https://github.com/FrigadeHQ/hob) project.
+Source for https://khaledchat.io: the product site, download center and documentation for Khaled Chat, a privacy-focused offline AI desktop assistant built upon the open-source [Hob](https://github.com/FrigadeHQ/hob) project.
 
 Stack: Next.js (App Router, static export) · React · TypeScript · Tailwind CSS v4 · Lucide icons. No database, no analytics, no trackers.
 

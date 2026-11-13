@@ -4,7 +4,7 @@ export interface FaqItem { q: string; a: string }
 export const faq: FaqItem[] = [
   { q: "What is Khaled Chat?", a: "Khaled Chat is an upcoming, privacy-focused desktop AI assistant designed to run AI models locally on your computer. It is currently in development and has not been released yet." },
   { q: "Does Khaled Chat work without internet?", a: "An internet connection is needed to download the application and an initial AI model. Once a compatible model is installed, supported local AI features are designed to work offline." },
-  { q: "Is Khaled Chat free?", a: "Khaled Chat is being developed using the open-source Hob project. No subscriptions or in-app payments are planned. Khaled Chat's own source code is not publicly available yet; we will link the official repository here once it is published." },
+  { q: "Is Khaled Chat free?", a: "Khaled Chat is being developed using the open-source Hob project. No subscriptions or in-app payments are planned. Its source code is public at github.com/Elomami1976/khaledchat-desktop under the MIT License." },
   { q: "Does Khaled Chat require an account?", a: "No. Khaled Chat is being designed to work without registration or an online account." },
   { q: "How does Khaled Chat choose an AI model?", a: "Khaled Chat is being designed to check your hardware, such as memory, processor, graphics card and free storage, and recommend models suited to those resources." },
   { q: "Can I install my own AI models?", a: "Importing local model files is a planned capability. This answer will be updated once it is available in a release." },

@@ -1,6 +1,7 @@
 import { Lock, WifiOff, Cpu, ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card, Container, IconBox, SectionHeading, StatusBadge } from "@/components/ui/primitives";
+import { chatModels, extraModels } from "@/data/models";
 import { AppPreview } from "./AppPreview";
 import { features } from "@/data/features";
 import { latestRelease } from "@/data/releases";
@@ -157,6 +158,60 @@ export function DownloadCta() {
             Go to downloads
           </ButtonLink>
         </div>
+      </Container>
+    </section>
+  );
+}
+
+/** The models in Khaled Chat's built-in catalog (src/data/models.ts). */
+export function ModelsSection() {
+  return (
+    <section aria-labelledby="models-title" id="models">
+      <Container className="py-20 sm:py-24">
+        <div id="models-title">
+          <SectionHeading
+            center
+            eyebrow="AI models"
+            title={`${chatModels.length} chat models, picked to fit your computer`}
+            intro="Khaled Chat checks your hardware and recommends one. Every model is free, runs on your computer, and is downloaded only after you confirm it."
+          />
+        </div>
+        <div className="mx-auto mt-12 max-w-4xl overflow-x-auto rounded-2xl border border-line bg-card">
+          <table className="w-full text-left text-sm">
+            <caption className="sr-only">Chat models in the built-in catalog</caption>
+            <thead className="border-b border-line text-muted">
+              <tr>
+                <th scope="col" className="px-5 py-3 font-medium">Model</th>
+                <th scope="col" className="px-5 py-3 font-medium">Download</th>
+                <th scope="col" className="px-5 py-3 font-medium">Rough fit</th>
+                <th scope="col" className="px-5 py-3 font-medium">License</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-line">
+              {chatModels.map((m) => (
+                <tr key={m.name}>
+                  <th scope="row" className="px-5 py-3 font-medium">
+                    {m.name}
+                    {m.tested && <span className="ms-2 rounded-full border border-line px-2 py-0.5 text-xs font-normal text-muted">Tested</span>}
+                  </th>
+                  <td className="px-5 py-3 whitespace-nowrap">{m.sizeGB.toFixed(2)} GB</td>
+                  <td className="px-5 py-3 text-muted">{m.fits}</td>
+                  <td className="px-5 py-3 text-muted">{m.license}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <ul className="mx-auto mt-6 max-w-4xl space-y-2 text-sm leading-6 text-muted">
+          {extraModels.map((x) => (
+            <li key={x.feature}><span className="font-medium text-fg">{x.feature}</span> (optional): {x.models}. {x.license}.</li>
+          ))}
+        </ul>
+        <p className="mx-auto mt-6 max-w-4xl text-sm leading-6 text-muted">
+          &ldquo;Rough fit&rdquo; is a guide only: the app&apos;s own hardware check decides, and models that won&apos;t fit are shown
+          but can&apos;t be picked. &ldquo;Tested&rdquo; means verified end to end in Khaled Chat on real hardware; the others
+          come from the upstream Hob catalog with verified checksums and are still being tested.
+        </p>
       </Container>
     </section>
   );

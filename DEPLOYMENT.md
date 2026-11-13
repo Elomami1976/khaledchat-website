@@ -1,4 +1,4 @@
-# Deploying khaledchat.com
+# Deploying khaledchat.io
 
 The site is a fully static export. Production needs only a web server that serves files over HTTPS: no Node.js, database or server-side code.
 
@@ -7,7 +7,7 @@ The site is a fully static export. Production needs only a web server that serve
 The host must:
 
 - Serve static files from a directory you upload (any of: Nginx, Apache, Caddy, Cloudflare Pages, Netlify, GitHub Pages, S3 + CloudFront, or a shared host with file upload).
-- Support HTTPS with a valid certificate for `khaledchat.com` (and `www.khaledchat.com` if used).
+- Support HTTPS with a valid certificate for `khaledchat.io` (and `www.khaledchat.io` if used).
 - Serve `/some/path/` from `/some/path/index.html` (standard directory-index behaviour).
 - Allow a custom 404 page (`/404.html`).
 - Serve `.txt` files (Next.js prefetch data such as `__next.docs.__PAGE__.txt`) as `text/plain`. Do not block or rewrite them.
@@ -53,10 +53,10 @@ Upload the **contents** of `out/` (not the folder itself) to the web root.
 
 ## 4. Domain and HTTPS
 
-1. At your DNS provider, point `khaledchat.com` to the host:
+1. At your DNS provider, point `khaledchat.io` to the host:
    - a static host/CDN usually gives a CNAME target (use an ALIAS/ANAME/flattened CNAME for the apex domain), or
    - your own server: an `A` record (and `AAAA` for IPv6) with its IP address.
-2. Add `www.khaledchat.com` as a CNAME to the same target and redirect it to `https://khaledchat.com` (the canonical URLs in the site use the apex domain without `www`).
+2. Add `www.khaledchat.io` as a CNAME to the same target and redirect it to `https://khaledchat.io` (the canonical URLs in the site use the apex domain without `www`).
 3. Enable HTTPS: managed certificates on static hosts/CDNs, or Let's Encrypt (`certbot`) on your own server.
 4. Redirect all `http://` requests to `https://` (301).
 5. After certificates work, enable HSTS (header below). Start with a short `max-age` if you want an easy way back, then raise it to one year.
@@ -68,13 +68,13 @@ Upload the **contents** of `out/` (not the folder itself) to the web root.
    `tar -czf khaledchat-$(git rev-parse --short HEAD).tar.gz -C out .`
 3. Upload the contents of `out/` to the web root, replacing the previous files. Prefer an atomic switch where the host supports it (new release folder + symlink switch, or the host's own deploy/rollback feature) so visitors never see a half-uploaded site.
 4. Smoke-test production:
-   - `https://khaledchat.com/` loads, light/dark toggle works.
+   - `https://khaledchat.io/` loads, light/dark toggle works.
    - Every top-level page and `/docs/getting-started/` loads; clicking between docs pages works.
-   - `https://khaledchat.com/does-not-exist/` shows the custom 404 page with HTTP status 404.
-   - `https://khaledchat.com/sitemap.xml`, `/robots.txt` and `/og.png` load.
+   - `https://khaledchat.io/does-not-exist/` shows the custom 404 page with HTTP status 404.
+   - `https://khaledchat.io/sitemap.xml`, `/robots.txt` and `/og.png` load.
    - The browser console shows no errors and the network tab shows no failed requests.
    - Run PageSpeed Insights (https://pagespeed.web.dev) on the home page for real-world scores.
-5. Optional: submit `https://khaledchat.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+5. Optional: submit `https://khaledchat.io/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 
 ## 6. Recommended headers
 
@@ -83,7 +83,7 @@ Nginx example (adapt for your host):
 ```nginx
 server {
   listen 443 ssl http2;
-  server_name khaledchat.com;
+  server_name khaledchat.io;
   root /var/www/khaledchat/current;
 
   error_page 404 /404.html;
@@ -120,20 +120,20 @@ Notes:
 
 `public/.htaccess` is copied into `out/` by the build. It:
 - sets the 404 page;
-- redirects http and www to https://khaledchat.com;
+- redirects http and www to https://khaledchat.io;
 - adds the security and caching headers from section 6.
 
 Strict-Transport-Security is commented out. Enable it once HTTPS has worked for a few days.
 
 1. Run `npm run build`. It also generates `sitemap.xml`, `robots.txt` and `llms.txt` (from `src/app/`).
 2. Zip the **contents** of `out/`, including `.htaccess`, with forward-slash paths. On Windows, run this from inside `out/`: `tar -a -c -f ../site.zip * .htaccess`. PowerShell 5's Compress-Archive writes backslash paths, which break on Linux hosts.
-3. In hPanel, open **Websites → khaledchat.com → File Manager → public_html**.
+3. In hPanel, open **Websites → khaledchat.io → File Manager → public_html**.
    - Remove the placeholder `default.php` and any previous site files.
    - Upload the zip, choose **Extract**, then delete the zip.
 4. In **Security → SSL**, install the free certificate and turn on **Force HTTPS**.
 5. Smoke-test as in section 5. Also check:
    - `/llms.txt`, `/robots.txt` and `/sitemap.xml` load;
-   - `https://www.khaledchat.com/` and `http://khaledchat.com/` both redirect to `https://khaledchat.com/`.
+   - `https://www.khaledchat.io/` and `http://khaledchat.io/` both redirect to `https://khaledchat.io/`.
 
 ## 7. Rollback
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/site";
-import { FeatureGrid, HardwareSection, DownloadCta } from "@/components/sections/home";
+import { FeatureGrid, HardwareSection, ModelsSection, DownloadCta } from "@/components/sections/home";
 import { Container, PageHeader, StatusBadge } from "@/components/ui/primitives";
 
 export const metadata: Metadata = pageMetadata({
@@ -28,6 +28,7 @@ export default function FeaturesPage() {
         <FeatureGrid />
       </Container>
       <HardwareSection />
+      <ModelsSection />
       <DownloadCta />
     </>
   );

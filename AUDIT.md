@@ -1,4 +1,4 @@
-# Pre-deployment audit: khaledchat.com
+# Pre-deployment audit: khaledchat.io
 
 Date: 2026-11-12 · Next.js 16.4.6 · Tested build: fresh `npm run build` of this commit, served locally from `out/`.
 

@@ -1,12 +1,12 @@
 export const site = {
   name: "Khaled Chat",
-  url: "https://khaledchat.com",
+  url: "https://khaledchat.io",
   tagline: "Your AI. Your Device. Your Privacy.",
   title: "Khaled Chat | Private Offline AI for Your Computer",
   description:
     "Discover Khaled Chat, a privacy-focused desktop AI assistant designed to run locally on your computer. Work with AI offline using models suited to your hardware.",
   /** Official Khaled Chat source repository. Set when it is public. */
-  repoUrl: null as string | null,
+  repoUrl: "https://github.com/Elomami1976/khaledchat-desktop" as string | null,
   ogImage: { url: "/og.png", width: 1200, height: 630, alt: "Khaled Chat — Your AI. Your Device. Your Privacy." },
   upstream: {
     name: "Hob",

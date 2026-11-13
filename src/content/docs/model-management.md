@@ -8,7 +8,20 @@ As a general rule, larger models need more memory and produce higher-quality res
 
 ## Downloading models
 
-Khaled Chat recommends models that suit your hardware. Each model needs to be downloaded once. Download sizes vary widely between models.
+Khaled Chat recommends models that suit your hardware. Each model needs to be downloaded once, and only after you confirm it: the confirmation shows the size, source, destination folder and license.
+
+The built-in catalog has 8 chat models:
+
+- **Qwen3 1.7B**: 1.83 GB, for 8 GB computers and older processors (tested in Khaled Chat)
+- **Gemma 4 E2B**: 3.35 GB
+- **Gemma 4 E4B Compact**: 3.86 GB
+- **Gemma 4 E4B**: 5.15 GB
+- **Gemma 4 26B Compact**: 9.66 GB
+- **gpt-oss 20B**: 12.11 GB
+- **Gemma 4 26B**: 14.44 GB
+- **gpt-oss 120B**: 63.39 GB, for high-end workstations
+
+All are Apache-2.0 licensed. See the full table with rough hardware fit on the [Features page](/features/#models).
 
 ## Importing local model files
 
