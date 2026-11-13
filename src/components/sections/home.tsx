@@ -18,9 +18,8 @@ export function Hero() {
             Your AI. Your Device. Your Privacy.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted text-pretty sm:text-xl">
-            Khaled Chat is an upcoming desktop AI assistant designed to run locally on your computer. It aims to bring
-            private AI conversations, document assistance, coding tools, and intelligent hardware-based model
-            selection into one simple application.
+            Khaled Chat is a free desktop AI assistant that runs on your own computer. It checks your hardware, recommends
+            a model that fits, and keeps your conversations private, with no account and no cloud.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <ButtonLink href="/download/" size="lg" className="w-full sm:w-auto">
@@ -119,7 +118,7 @@ export function HardwareSection() {
             center
             eyebrow="Hardware-aware"
             title="AI That Adapts to Your Computer"
-            intro="Khaled Chat is being designed to check your hardware and help select an AI model suited to your available resources."
+            intro="Khaled Chat checks your hardware and recommends an AI model suited to your available resources."
           />
         </div>
         <ol className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -146,9 +145,9 @@ export function DownloadCta() {
     <section>
       <Container className="py-16">
         <div className="rounded-3xl bg-invert px-6 py-16 text-center text-invert-fg sm:px-12">
-          <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">Private AI, coming to your desktop.</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">Private AI on your desktop.</h2>
           <p className="mx-auto mt-4 max-w-xl opacity-75">
-            Khaled Chat is being prepared for Windows, macOS and Linux.
+            Version 0.1.0 is available for Windows 10 and 11. macOS and Linux will follow.
           </p>
           <ButtonLink
             href="/download/"

@@ -1,21 +1,40 @@
-> This page lists general guidance. Specific error messages and fixes will be added after the first release.
+> Written for Khaled Chat 0.1.0.
 
-## Model download failures
+## Windows says it "protected your PC"
 
-Check your internet connection and available disk space, then retry the download. Large downloads are more likely to be interrupted on unstable connections.
+The 0.1.0 installer is not code-signed yet. Choose **More info**, then **Run anyway**. Only do this with an installer downloaded from the official [Download page](/download/), and compare its SHA-256 checksum with the one shown there.
 
-## Insufficient memory
+## Answers are very slow
 
-Close other applications to free memory, or choose a smaller model. The recommended model is selected to fit your hardware, but available memory changes while you use your computer.
+On computers without a usable graphics card, the AI runs on the processor. Try these:
 
-## Slow inference
+- In **Settings → General → Chat mode**, choose **Simple**, or leave it on **Auto**.
+- Use a smaller model, such as Qwen3 1.7B (**Settings → Model**).
+- Close other heavy programs to free memory.
 
-Response speed depends on model size and hardware. Try a smaller model, close background applications, and make sure your computer is not in a power-saving mode.
+The first answer after starting the app takes longest, because the model is loaded and the instructions are read first.
 
-## Unsupported hardware
+## The app stays on "Finding my focus…" for a long time
 
-If no model can run comfortably on your computer, Khaled Chat will tell you. Some older or very low-memory computers may not be able to run local AI models.
+This is the model loading. On older computers it can take several minutes. If the AI engine stops while loading, Khaled Chat tries again without the graphics card.
 
-## Application startup problems
+## A download was interrupted
 
-Make sure you are using the latest version from the [Download page](/download/). If the problem continues, reinstall the application. Support channels will be listed here once available.
+Khaled Chat never resumes a download by itself. Open the app and choose **Resume download…**. It continues from where it stopped, after you confirm again.
+
+## Not enough disk space
+
+Free some space, or remove models you don't use (**Settings → Model**). **Settings → Files & storage** shows what uses the space.
+
+## A feature says "Not available in this version"
+
+Some optional parts are held back in 0.1.0:
+
+- **Code tools** on Windows, until running code can be isolated well enough;
+- **Web search**, while its licensing is reviewed.
+
+See the [changelog](/changelog/).
+
+## Reporting a problem
+
+Report problems through [GitHub issues](https://github.com/Elomami1976/khaledchat-desktop/issues), or by email via the [Contact page](/contact/). Describe what happened, and include the information from **Settings → Hardware** and the version from **Settings → About**.

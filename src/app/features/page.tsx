@@ -5,7 +5,7 @@ import { Container, PageHeader, StatusBadge } from "@/components/ui/primitives";
 
 export const metadata: Metadata = pageMetadata({
   title: "Features",
-  description: "Local AI chat, hardware-aware model selection, document assistance and more. See what Khaled Chat can do and what is in development.",
+  description: "Local AI chat, hardware-aware model selection, document assistance and more. See what Khaled Chat can do today and what is planned.",
   path: "/features/",
 });
 
@@ -15,7 +15,7 @@ export default function FeaturesPage() {
       <PageHeader
         eyebrow="Features"
         title="Capable AI, designed to stay on your computer."
-        intro="Khaled Chat is under active development. Each capability below is labeled with its current status."
+        intro="Each capability below is labeled with its status in the current version."
       />
       <Container className="py-16">
         <h2 className="sr-only">All features</h2>

@@ -4,7 +4,7 @@ import { safeUrl, site, pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "About",
-  description: "Khaled Chat is an upcoming desktop AI application focused on privacy, simplicity and accessibility, developed using the open-source Hob project.",
+  description: "Khaled Chat is a free desktop AI application focused on privacy, simplicity and accessibility, built on the open-source Hob project.",
   path: "/about/",
 });
 
@@ -19,19 +19,19 @@ export default function AboutPage() {
       <Container className="py-16">
         <Prose>
           <p>
-            Khaled Chat is an upcoming desktop AI application focused on privacy, simplicity and accessibility. It is
-            being designed to run AI models on your own computer, so you can use modern AI without sending your
-            conversations to a cloud service. It is currently in development and has not been released yet.
+            Khaled Chat is a free desktop AI application focused on privacy, simplicity and accessibility. It runs AI
+            models on your own computer, so you can use modern AI without sending your conversations to a cloud
+            service. Version 0.1.0 is available for Windows.
           </p>
           <p>
             Setting up local AI usually means comparing model formats, memory requirements and configuration options.
-            Khaled Chat aims to remove that work: it is being designed to look at your hardware, recommend a suitable
-            model, and help you download and configure it.
+            Khaled Chat removes that work: it looks at your hardware, recommends a suitable model, and downloads and
+            sets it up after you confirm.
           </p>
 
           <h2>Open source</h2>
           <p>
-            Khaled Chat is being developed using the open-source{" "}
+            Khaled Chat is built on the open-source{" "}
             <a href={site.upstream.url} rel="noopener noreferrer">Hob</a> project, which is released under the MIT
             License. We are grateful to its authors and contributors.
           </p>

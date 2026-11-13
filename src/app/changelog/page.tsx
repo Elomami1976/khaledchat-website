@@ -23,8 +23,7 @@ export default function ChangelogPage() {
         {releases.length === 0 ? (
           <div className="max-w-2xl">
             <Notice>
-              Khaled Chat is in pre-release development. There are no public releases yet. Release notes will be
-              published here with the first version.
+              There are no releases yet.
             </Notice>
           </div>
         ) : (

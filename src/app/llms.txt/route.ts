@@ -5,6 +5,7 @@ import { faq } from "@/data/faq";
 import { features, statusLabel } from "@/data/features";
 import { chatModels, extraModels } from "@/data/models";
 import { site } from "@/lib/site";
+import { latestRelease } from "@/data/releases";
 
 export const dynamic = "force-static";
 
@@ -27,7 +28,7 @@ export function GET() {
     "",
     `> ${site.tagline} ${site.description}`,
     "",
-    `${site.name} is a free, open-source desktop AI assistant (Windows first) that runs open-weight AI models locally (GGUF via llama.cpp). It needs no account, subscription or cloud AI service, and downloads nothing without the user's confirmation. It is based on ${site.upstream.name} (${site.upstream.url}, MIT License). Status: in development; no public release yet.`,
+    `${site.name} is a free, open-source desktop AI assistant (Windows first) that runs open-weight AI models locally (GGUF via llama.cpp). It needs no account, subscription or cloud AI service, and downloads nothing without the user's confirmation. It is based on ${site.upstream.name} (${site.upstream.url}, MIT License). ${latestRelease ? `Latest release: ${latestRelease.version} (${latestRelease.date}) for Windows, download: ${site.url}/download/` : "Status: in development; no public release yet."}`,
     "",
     "## Pages",
     "",
