@@ -75,3 +75,45 @@ details[open] .chev { transform: rotate(180deg); }
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- Animated background ---------- */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--fg) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--fg) 5%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 100%);
+  animation: grid-pan 40s linear infinite;
+}
+@keyframes grid-pan {
+  to { background-position: 56px 56px; }
+}
+.bg-orb {
+  position: absolute;
+  width: 42vmax;
+  height: 42vmax;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.18;
+  will-change: transform;
+}
+.dark .bg-orb { opacity: 0.22; }
+.bg-orb-1 { top: -15vmax; left: -10vmax; background: #8b8bff; animation: orb-1 28s ease-in-out infinite alternate; }
+.bg-orb-2 { top: 10vmax; right: -14vmax; background: #5ec8d8; animation: orb-2 34s ease-in-out infinite alternate; }
+.bg-orb-3 { bottom: -20vmax; left: 25vw; background: #c79bff; opacity: 0.12; animation: orb-3 40s ease-in-out infinite alternate; }
+@keyframes orb-1 { to { transform: translate(18vw, 12vh) scale(1.15); } }
+@keyframes orb-2 { to { transform: translate(-16vw, 18vh) scale(0.9); } }
+@keyframes orb-3 { to { transform: translate(-12vw, -20vh) scale(1.1); } }
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-grid, .bg-orb { animation: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}

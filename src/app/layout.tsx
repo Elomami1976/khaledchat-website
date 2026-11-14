@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { site } from "@/lib/site";
+import { AnimatedBackground } from "@/components/effects/AnimatedBackground";
+import { ScrollReveal } from "@/components/effects/ScrollReveal";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
@@ -52,7 +54,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body className="min-h-dvh">
+      <body className="relative isolate min-h-dvh">
+        <AnimatedBackground />
+        <ScrollReveal />
         <Header />
         <main id="main">{children}</main>
         <Footer />
