@@ -7,10 +7,13 @@
 export interface CatalogModel { name: string; sizeGB: number; fits: string; license: string; tested?: boolean }
 
 export const chatModels: CatalogModel[] = [
+  { name: "Qwen3 1.7B Compact", sizeGB: 1.11, fits: "8 GB RAM, the fastest choice on older computers", license: "Apache-2.0" },
   { name: "Qwen3 1.7B", sizeGB: 1.83, fits: "8 GB RAM, older computers", license: "Apache-2.0", tested: true },
+  { name: "Qwen3 4B", sizeGB: 2.5, fits: "12 GB+ RAM or a graphics card; good Arabic", license: "Apache-2.0" },
   { name: "Gemma 4 E2B", sizeGB: 3.35, fits: "8 GB RAM", license: "Apache-2.0" },
   { name: "Gemma 4 E4B Compact", sizeGB: 3.86, fits: "8–16 GB RAM", license: "Apache-2.0" },
   { name: "Gemma 4 E4B", sizeGB: 5.15, fits: "16 GB RAM", license: "Apache-2.0" },
+  { name: "Qwen3 8B", sizeGB: 5.03, fits: "A graphics card with 8 GB+ of memory", license: "Apache-2.0" },
   { name: "Gemma 4 26B Compact", sizeGB: 9.66, fits: "16 GB+ RAM or a graphics card", license: "Apache-2.0" },
   { name: "gpt-oss 20B", sizeGB: 12.11, fits: "16–24 GB+ RAM or a graphics card", license: "Apache-2.0" },
   { name: "Gemma 4 26B", sizeGB: 14.44, fits: "24 GB+ RAM or a strong graphics card", license: "Apache-2.0" },

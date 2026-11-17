@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       <Container className="py-16">
         <Prose>
           <p className="text-sm text-muted">
-            This page describes Khaled Chat 0.1.0 for Windows. It is reviewed with each release.
+            This page describes Khaled Chat 0.1.1 for Windows. It is reviewed with each release.
           </p>
 
           <h2>The desktop application</h2>

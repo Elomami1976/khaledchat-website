@@ -1,4 +1,4 @@
-> Written for Khaled Chat 0.1.0.
+> Written for Khaled Chat 0.1.1.
 
 ## Understanding local AI models
 
@@ -8,9 +8,12 @@ Bigger models usually give better answers, but they need more memory and run mor
 
 ## The built-in models
 
-Khaled Chat comes with a list of 8 chat models. It recommends the one that fits your computer best:
+Khaled Chat comes with a list of 11 chat models. It recommends the one that fits your computer best:
 
+- **Qwen3 1.7B Compact**: 1.11 GB, the fastest choice on 8 GB computers (new in 0.1.1)
 - **Qwen3 1.7B**: 1.83 GB, for 8 GB computers and older processors (tested in Khaled Chat)
+- **Qwen3 4B**: 2.50 GB, for 12 GB computers or with a graphics card, good Arabic (new in 0.1.1)
+- **Qwen3 8B**: 5.03 GB, for computers with a larger graphics card (new in 0.1.1)
 - **Gemma 4 E2B**: 3.35 GB
 - **Gemma 4 E4B Compact**: 3.86 GB
 - **Gemma 4 E4B**: 5.15 GB

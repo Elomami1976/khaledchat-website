@@ -18,7 +18,7 @@ export default function DocsIndex() {
       <p className="mt-4 max-w-2xl text-lg text-muted">Everything you need to set up and use Khaled Chat.</p>
       <div className="mt-6 max-w-2xl">
         <Notice>
-          These guides are written for Khaled Chat 0.1.0 on Windows.
+          These guides are written for Khaled Chat 0.1.1 on Windows.
         </Notice>
       </div>
       <ul className="mt-10 grid gap-4 sm:grid-cols-2">

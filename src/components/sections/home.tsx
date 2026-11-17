@@ -147,7 +147,7 @@ export function DownloadCta() {
         <div className="rounded-3xl bg-invert px-6 py-16 text-center text-invert-fg sm:px-12">
           <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">Private AI on your desktop.</h2>
           <p className="mx-auto mt-4 max-w-xl opacity-75">
-            Version 0.1.0 is available for Windows 10 and 11. macOS and Linux will follow.
+            Version 0.1.1 is available for Windows 10 and 11. macOS and Linux will follow.
           </p>
           <ButtonLink
             href="/download/"

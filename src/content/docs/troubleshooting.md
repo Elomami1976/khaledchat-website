@@ -1,8 +1,8 @@
-> Written for Khaled Chat 0.1.0.
+> Written for Khaled Chat 0.1.1.
 
 ## Windows says it "protected your PC"
 
-The 0.1.0 installer is not code-signed yet. Choose **More info**, then **Run anyway**. Only do this with an installer downloaded from the official [Download page](/download/), and compare its SHA-256 checksum with the one shown there.
+The 0.1.1 installer is not code-signed yet. Choose **More info**, then **Run anyway**. Only do this with an installer downloaded from the official [Download page](/download/), and compare its SHA-256 checksum with the one shown there.
 
 ## Answers are very slow
 
@@ -28,7 +28,7 @@ Free some space, or remove models you don't use (**Settings → Model**). **Sett
 
 ## A feature says "Not available in this version"
 
-Some optional parts are held back in 0.1.0:
+Some optional parts are held back in 0.1.1:
 
 - **Code tools** on Windows, until running code can be isolated well enough;
 - **Web search**, while its licensing is reviewed.

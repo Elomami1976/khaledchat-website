@@ -1,4 +1,4 @@
-> Written for Khaled Chat 0.1.0.
+> Written for Khaled Chat 0.1.1.
 
 ## Everything stays on your computer
 

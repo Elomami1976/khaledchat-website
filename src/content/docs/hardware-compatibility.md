@@ -1,4 +1,4 @@
-> Written for Khaled Chat 0.1.0.
+> Written for Khaled Chat 0.1.1.
 
 ## What Khaled Chat checks
 
@@ -30,7 +30,7 @@ You can change this in **Settings → General → Chat mode**:
 
 ## Computers with a graphics card
 
-With an NVIDIA graphics card (CUDA), or one that supports Vulkan, models run much faster and bigger models become practical. Version 0.1.0 has not yet been measured on computers with graphics cards.
+With an NVIDIA graphics card (CUDA), or one that supports Vulkan, models run much faster and bigger models become practical. Version 0.1.1 has not yet been measured on computers with graphics cards.
 
 ## Memory
 

@@ -33,6 +33,35 @@ export const platforms: { id: Platform; name: string }[] = [
 
 export const releases: Release[] = [
   {
+    version: "0.1.1",
+    date: "2026-11-17",
+    notesUrl: "https://github.com/Elomami1976/khaledchat-desktop/releases/tag/v0.1.1",
+    assets: [
+      {
+        platform: "windows",
+        arch: "x64",
+        fileName: "KhaledChat-Setup-0.1.1-x64.exe",
+        url: "https://github.com/Elomami1976/khaledchat-desktop/releases/download/v0.1.1/KhaledChat-Setup-0.1.1-x64.exe",
+        size: "422 MB",
+        sha256: "4bcec1da380fdca0847fe758a4cf8e2e51c8fcbd1fc5d60fb26d074f9f6e1602",
+        requirements: [
+          "Windows 10 or 11, 64-bit (tested on Windows 10)",
+          "8 GB of memory or more",
+          "1.2 GB+ free disk space for the smallest model",
+          "Not code-signed yet: Windows may show a SmartScreen warning",
+        ],
+      },
+    ],
+    changes: {
+      features: [
+        "New model: Qwen3 4B, with good Arabic, for 12 GB computers or with a graphics card",
+        "New model: Qwen3 8B, for computers with a larger graphics card",
+        "New model: Qwen3 1.7B Compact, a smaller and faster choice for 8 GB computers",
+      ],
+      improvements: ["All new models are pinned to exact files with SHA-256 checksums and download only after you confirm"],
+    },
+  },
+  {
     version: "0.1.0",
     date: "2026-11-13",
     notesUrl: "https://github.com/Elomami1976/khaledchat-desktop/releases/tag/v0.1.0",

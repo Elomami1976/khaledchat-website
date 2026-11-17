@@ -1,4 +1,4 @@
-> Written for Khaled Chat 0.1.0.
+> Written for Khaled Chat 0.1.1.
 
 ## What works offline
 
@@ -28,4 +28,4 @@ The AI runs on your computer, and your chats are stored there.
 
 ## Web search
 
-Web search is not available in version 0.1.0 while its licensing is reviewed. With **Web access** on, the assistant can still read pages you give it.
+Web search is not available in version 0.1.1 while its licensing is reviewed. With **Web access** on, the assistant can still read pages you give it.

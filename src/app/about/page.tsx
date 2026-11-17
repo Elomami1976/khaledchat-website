@@ -21,7 +21,7 @@ export default function AboutPage() {
           <p>
             Khaled Chat is a free desktop AI application focused on privacy, simplicity and accessibility. It runs AI
             models on your own computer, so you can use modern AI without sending your conversations to a cloud
-            service. Version 0.1.0 is available for Windows.
+            service. Version 0.1.1 is available for Windows.
           </p>
           <p>
             Setting up local AI usually means comparing model formats, memory requirements and configuration options.
